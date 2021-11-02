@@ -94,7 +94,6 @@ public class Blogg {
 		for (int i = 0; i < getAntall(); i++) {
 			ut += innleggtabell[i];
 		}
-		System.out.print(ut);
 		return ut;
 	}
 

@@ -40,7 +40,11 @@ public class Bilde extends Tekst {
 	// Metoden nedenfor er kun for valgfri oppgave 6
 	public String toHTML() {
 		
-		throw new UnsupportedOperationException(TODO.method());
+		String ut = "";
+		ut += "\t<p>" + getTekst() + "<p>";
+		ut+= "\n\t<iframe src=\"" + getUrl() + "\" height=600 width=600></iframe>";
+		
+		return ut;	
 				
 	}
 }

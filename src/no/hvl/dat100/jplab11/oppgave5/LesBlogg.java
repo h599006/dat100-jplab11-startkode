@@ -21,8 +21,65 @@ public class LesBlogg {
 	private static String BILDE = "BILDE";
 
 	public static Blogg les(String mappe, String filnavn) {
+		
+		Blogg lestBlogg = null;
+		
+		try {
+			Scanner scanner = new Scanner(new File(mappe + filnavn));
+			
+			int antall = Integer.parseInt(scanner.nextLine());
+			
+			lestBlogg = new Blogg(antall);
 
-		throw new UnsupportedOperationException(TODO.method());
+			while (scanner.hasNext()) {
+				
 
+				int id = 0;
+				String bruker = "";
+				String dato = "";
+				int likes = 0;
+				String tekst = "";
+				String url = "";
+				
+				String data = scanner.nextLine();
+				
+				if (data.equals(TEKST)) {
+					
+					id = Integer.parseInt(scanner.nextLine());
+					bruker = scanner.nextLine();
+					dato = scanner.nextLine();
+					likes = Integer.parseInt(scanner.nextLine());
+					tekst = scanner.nextLine();
+					
+					
+					Tekst nyTekst = new Tekst(id, bruker, dato, likes, tekst);
+					
+					lestBlogg.leggTil(nyTekst);
+					
+				}
+				
+				else if (data.equals(BILDE)) {
+					id = Integer.parseInt(scanner.nextLine());
+					bruker = scanner.nextLine();
+					dato = scanner.nextLine();
+					likes = Integer.parseInt(scanner.nextLine());
+					tekst = scanner.nextLine();
+					url = scanner.nextLine();
+					
+					Bilde nyttBilde = new Bilde(id, bruker, dato, likes, tekst, url);
+					
+					lestBlogg.leggTil(nyttBilde);
+				}
+				
+				
+			}
+			scanner.close();
+		}
+		catch(FileNotFoundException e) {
+			JOptionPane.showMessageDialog(null,"Filenkanikkeåpnes");
+		}
+		finally {
+			return lestBlogg;
+		}
 	}
 }
