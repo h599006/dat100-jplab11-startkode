@@ -91,10 +91,10 @@ public class Blogg {
 		String ut = "";
 		ut += getAntall() + "\n"; 
 
-		for (int i = 0; i < innleggtabell.length; i++) {
+		for (int i = 0; i < getAntall(); i++) {
 			ut += innleggtabell[i];
 		}
-		
+		System.out.print(ut);
 		return ut;
 	}
 
