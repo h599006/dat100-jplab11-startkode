@@ -26,25 +26,22 @@ public class HtmlBlogg extends Blogg {
 	
 	@Override
 	public String toString() {
-		
+
 		Innlegg[] samling = getSamling();	
 		String ut = "";
 		
+		/*
+		System.out.println(samling[0].toHTML());
+		System.out.println("--------------");
+		System.out.println(samling[1].toHTML());
+		*/
 		ut += HTMLPREFIX;
 		
 		for (int i = 0; i < getAntall(); i++) {
-			
-			if (samling[i] instanceof Tekst) {
-				ut += Innlegg.toString() + "\n";
-				ut += Tekst.toString();
-			}
-			else if (samling[i] instanceof Bilde) {
-				ut += "<hr>\n" + Innlegg.class.toString() + "\n";
-				ut += Tekst.toString() + "\n";
-				ut += Bilde.toString() + "<hr>";
-			}
-			
+			ut += samling[i].toHTML();
 		}
+			
+			
 		
 		ut+= HTMLPOSTFIX;
 			

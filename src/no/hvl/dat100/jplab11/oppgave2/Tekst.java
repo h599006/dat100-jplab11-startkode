@@ -44,8 +44,8 @@ public class Tekst extends Innlegg {
 	// Metoden nedenfor er kun for valgfri oppgave 6
 	public String toHTML() {
 		String ut = "";
-		
-		ut+= "\t<p>" + getTekst() + "<p>";
+		ut += super.toHTML();
+		ut+= "\t\t<p>" + getTekst() + "<p>\n";
 		
 		return ut;		
 	}

@@ -97,7 +97,7 @@ public abstract class Innlegg {
 		
 		String ut = "";
 
-		ut += "\t<h2>" + getBruker() + "@" + getDato() + "[" + getId() + "]<h2>\n";
+		ut += "\t\t<h2>" + getBruker() + "@" + getDato() + " [" + getId() + "]<h2>\n";
 
 		return ut;		
 	}
