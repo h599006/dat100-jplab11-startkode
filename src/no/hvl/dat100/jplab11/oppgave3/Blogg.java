@@ -156,6 +156,5 @@ public class Blogg {
 			return null;
 		}
 		return nySamling;
-
 	}
 }
