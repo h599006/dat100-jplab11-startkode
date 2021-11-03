@@ -35,9 +35,7 @@ public class HtmlBlogg extends Blogg {
 		for (int i = 0; i < getAntall(); i++) {
 			ut += samling[i].toHTML();
 		}
-			
-			
-		
+
 		ut+= HTMLPOSTFIX;
 			
 		return ut;
