@@ -151,7 +151,7 @@ public class Blogg {
 				antall++;
 			}
 		}
-
+		
 		if (!funnet) {
 			return null;
 		}
