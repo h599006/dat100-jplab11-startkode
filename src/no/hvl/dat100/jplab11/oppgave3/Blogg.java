@@ -154,7 +154,7 @@ public class Blogg {
 		
 		if (!funnet) {
 			return null;
-		}
+		} 
 		return nySamling;
 	}
 }
