@@ -29,12 +29,7 @@ public class HtmlBlogg extends Blogg {
 
 		Innlegg[] samling = getSamling();	
 		String ut = "";
-		
-		/*
-		System.out.println(samling[0].toHTML());
-		System.out.println("--------------");
-		System.out.println(samling[1].toHTML());
-		*/
+
 		ut += HTMLPREFIX;
 		
 		for (int i = 0; i < getAntall(); i++) {
