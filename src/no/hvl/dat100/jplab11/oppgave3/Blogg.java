@@ -139,7 +139,23 @@ public class Blogg {
 	
 	public int[] search(String keyword) {
 		
-		throw new UnsupportedOperationException(TODO.method());
+		Innlegg[] samling = getSamling();
+		int[] nySamling = new int[getAntall()];
+		Boolean funnet = false;
+		int antall = 0;
+		
+		for (int i = 0; i < getAntall(); i++) {
+			if (samling[i].toString().contains(keyword) == true) {
+				nySamling[antall] = samling[i].getId();
+				funnet = true;
+				antall++;
+			}
+		}
+
+		if (!funnet) {
+			return null;
+		}
+		return nySamling;
 
 	}
 }
